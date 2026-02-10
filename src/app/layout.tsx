@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import MusicPlayer from "@/components/MusicPlayer";
 
 export const metadata: Metadata = {
   title: "Valentines: A Romantic Card Game with a Surprise Proposal",
@@ -18,12 +19,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="es">
+      <body>
+        <MusicPlayer />
+        {children}
+      </body>
     </html>
   );
 }
